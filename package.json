@@ -1,0 +1,17 @@
+{
+	"name": "InstantBootstrap",
+	"version": "0.1.0",
+	"private": true,
+	"description": "A no mess, easy way to start creating custom Twiiter Bootstrap themes using LESS, SASS, BOWER, and GRUNT with little to no configuration at all. ",
+	"devDependencies": {
+		"grunt": "^0.4.4",
+		"grunt-contrib-uglify": "^0.4.0",
+		"grunt-contrib-concat": "^0.4.0",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-contrib-jshint": "^0.10.0",
+		"grunt-contrib-less": "^0.11.0",
+		"grunt-contrib-cssmin": "^0.9.0",
+		"grunt-contrib-sass": "^0.7.3",
+		"grunt-browser-sync": "*"
+	}
+}
