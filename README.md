@@ -38,4 +38,4 @@ This will run the watch command on your less, or sass files as well run browsers
 
 ###BOWER Files
 Navigate to the root of your project and run ```$ BOWER INIT```
-I have included a .bowerrc file in the root of InstantBootstrap. Now that BOWER is initiated in your project it will automatically put them in the components foler under source in the root of your project.
+I have included a .bowerrc file in the root of InstantBootstrap. Now that BOWER is initiated in your project it will automatically put them in the components folder under source in the root of your project.
