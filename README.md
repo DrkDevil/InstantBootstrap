@@ -5,7 +5,7 @@ InstantBootstrap is a quick and easy way to start creating bootstrap themes usin
 Instant Bootstrap is rediculously easy to set up and start using.
 Fisrt step is to download, or clone the InstantBootstrap Git Repository.
 ```
-$git clone https://github.com/DrkDevil/InstantBootstrap 
+$ git clone https://github.com/DrkDevil/InstantBootstrap 
 ```
 Once downloaded navigate to the root of your projects folder where you downloaded InstantBootstrap and run $ npm install
 This will download all the dependencies needed to use InstantBootstrap and run your GRUNT Tasks.
