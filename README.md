@@ -32,7 +32,7 @@ $ GRUNT dist-sass
 This will read your scss files and minify them into your selected distribution folder.
 
 ```
-$GRUNT dist-watch
+$ GRUNT dist-watch
 ```
 This will run the watch command on your less, or sass files as well run browsersync.
 
