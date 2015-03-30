@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!-- Note there is no responsive meta tag here -->
+
     <link rel="icon" href="../../favicon.ico">
 
-    <title>InstantBootstrap</title>
+    <title>Non-responsive Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron-index.css" rel="stylesheet">
+    <link href="css/non-responsive.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -30,7 +32,8 @@
 
   <body>
 
-   <nav class="navbar navbar-fixed-top navbar-inverse">
+    <!-- Fixed navbar -->
+     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -86,65 +89,31 @@
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>InstantBootstrap <span class="badge alert-warning">alpha</span></h1>
-        <p>The quickest, and easiest way to start creating bootstrap themes using LESS, SASS, GRUNT, and BOWER.</p>
-        <p><a class="btn btn-success btn-lg" href="https://github.com/DrkDevil/InstantBootstrap" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Getting Started</h2>
-          <p>InstanstBootstrap makes it simple to create beautiful bootstrap themes using LESS, or SASS with just a few simple steps.</p>
-          <p>After the simple setup you will have all the files you need to build, and test a your bootstrap theme. </p><br>
-          <p>Simply download from our <a href="https://github.com/DrkDevil/InstantBootstrap/zipball/master">GitHub page</a>, or within your terminal run the command: </p>
-          <p><pre><code>$ git clone https://github.com/DrkDevil/InstantBootstrap </code></pre></p><br>
-          <p>The final step now is to navigate to the newly downloaded repo, and run <pre><code>$ npm install </code></pre></p><br>
-          <p>Now that all of InstantBootstrap's dependencies have been downloaded, you are ready to start creating beautiful bootstrap themes.</p>          
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>No Configuration Needed</h2>
-          <p>InstanstBootstrap has a simple folder structure and preset gruntfile, that makes it easy to jump right into developing.</p>
-          <p><div class="highlight"><pre><code class="language-bash" data-lang="bash">InstantBootstrap/
-├── source/ -- working files
-│ ├── css/
-│ ├── demo/
-│ ├── js/
-│ ├── sass/
-│ └── less/
-├── base_theme/ -- compiled files
-│ ├── css/
-│ ├── js/
-│ └── fonts/
-└── docs/ -- coming soon</code></pre></div></p>
-          <p>Also included are all 17 of bootstraps original templates, so you can start laying out new sites imediately. </p>
-          <p><a class="btn btn-default btn-primary" href="https://github.com/DrkDevil/InstantBootstrap" role="button">View Documentation</a></p></div>
-          <div class="col-md-4">
-          <h2>Easily Expandable</h2>
-          <p>Use Bower to easily add new components, and expand the functionality of your themes. To keep with the stucture of InstantBootstrap a .bowerrc file has been added to direct all bower components to the source folder. </p>
-       </div>
-        <div class="col-md-4">
-          <h2>Requirements</h2>
-          <p>The only requirement is GIT. If you have no previous knowledge of GIT and wish to learn about it please visit these sites.</p> 
-          <p><a  class="btn btn-primary" href="https://github.com/">GitHub</a> <a  class="btn btn-info" href="https://try.github.io/levels/1/challenges/1">Try GitHub Training</a></p>
-        </div>
+      <div class="page-header">
+        <h1>Non-responsive Bootstrap</h1>
+        <p class="lead">Disable the responsiveness of Bootstrap by fixing the width of the container and using the first grid system tier. <a href="http://getbootstrap.com/getting-started/#disable-responsive">Read the documentation</a> for more information.</p>
       </div>
 
-      <hr>
+      <h3>What changes</h3>
+      <p>Note the lack of the <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>, which disables the zooming aspect of sites in mobile devices. In addition, we reset our container's width and changed the navbar to prevent collapsing, and are basically good to go.</p>
 
-      <footer>
-        <p>Created by Brian Orr (<a href="https://github.com/drkdevil" class="user-mention">@drkdevil</a>) 2015</p>
-      </footer>
+      <h3>Regarding navbars</h3>
+      <p>As a heads up, the navbar component is rather tricky here in that the styles for displaying it are rather specific and detailed. Overrides to ensure desktop styles display are not as performant or sleek as one would like. Just be aware there may be potential gotchas as you build on top of this example when using the navbar.</p>
+
+      <h3>Browsers, scrolling, and fixed elements</h3>
+      <p>Non-responsive layouts highlight a key drawback to fixed elements. <strong class="text-danger">Any fixed component, such as a fixed navbar, will not be scrollable when the viewport becomes narrower than the page content.</strong> In other words, given the non-responsive container width of 970px and a viewport of 800px, you'll potentially hide 170px of content.</p>
+      <p>There is no way around this as it's default browser behavior. The only solution is a responsive layout or using a non-fixed element.</p>
+
+      <h3>Non-responsive grid system</h3>
+      <div class="row">
+        <div class="col-xs-4">One third</div>
+        <div class="col-xs-4">One third</div>
+        <div class="col-xs-4">One third</div>
+      </div>
+
     </div> <!-- /container -->
 
 
